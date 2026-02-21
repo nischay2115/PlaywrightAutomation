@@ -1,0 +1,24 @@
+{
+  "name": "playwrightautomation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "Network Interception": "npx playwright test --grep @nwIntercept",
+    "API-Testing": "npx playwright test --grep @API"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@cucumber/cucumber": "^12.6.0",
+    "@playwright/test": "^1.58.2",
+    "@types/node": "^25.1.0",
+    "allure": "^3.2.0",
+    "allure-playwright": "^3.4.5"
+  },
+  "dependencies": {
+    "exceljs": "^4.4.0"
+  }
+}

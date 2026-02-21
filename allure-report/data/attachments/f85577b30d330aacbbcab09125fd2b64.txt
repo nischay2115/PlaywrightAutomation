@@ -1,0 +1,3 @@
+[ 'ADIDAS ORIGINAL', 'ZARA COAT 3', 'iphone 13 pro' ]
+699809f81fe6115f6a979cbd
+true

@@ -1,0 +1,25 @@
+[
+    {
+
+        "emailID" : "nischay123@gmail.com",
+        "password" : "Nischay@123",
+        "website" : "https://rahulshettyacademy.com/client/",
+        "myProduct" : "ZARA COAT 3",
+        "countryKeyword" : "chi",
+        "desiredCountry" : "China",
+        "thankYouStatement" : "Thankyou for the order."
+
+    },
+
+    {
+        "emailID" : "123nischay@gmail.com",
+        "password" : "123@Nischay",
+        "website" : "https://rahulshettyacademy.com/client/",
+        "myProduct" : "ADIDAS ORIGINAL",
+        "countryKeyword" : "ind",
+        "desiredCountry" : "India",
+        "thankYouStatement" : "Thankyou for the order."
+
+    }
+
+]
