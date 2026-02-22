@@ -27,13 +27,9 @@ test('Dialog Box/pop Up, Hover and Frames', async ({page})=>
 
         //pop up
 
-        const [dialog] = await Promise.all(
-            [
-                page.waitForEvent('dialog'),
-                page.locator('#confirmbtn').click()
-            ]
-        );
-
+        const dialogPromise = page.waitForEvent('dialog');
+        await page.locator('#confirmbtn').click();
+        const dialog = await dialogPromise;
         await dialog.accept();
 
         //hover

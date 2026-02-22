@@ -5,6 +5,14 @@ pipeline {
         nodejs 'NodeJS'
     }
 
+    parameters { 
+        choice( 
+            name: 'TEST_SUITE', 
+            choices: ['All', 'Network Interception', 'API-Testing'], 
+            description: 'Select which test suite to run' 
+        ) 
+    }
+
     stages {
         stage('Checkout') {
             steps {
@@ -26,7 +34,16 @@ pipeline {
 
         stage('Run Playwright Tests') {
             steps {
-                bat 'npx playwright test'
+                script { 
+                    if (params.TEST_SUITE == 'Network Interception') { 
+                        bat 'npm run "Network Interception"' 
+                        } 
+                    else if (params.TEST_SUITE == 'API-Testing') {
+                         bat 'npm run API-Testing' 
+                        } 
+                    else { 
+                        bat 'npx playwright test' 
+                }
             }
         }
     }
