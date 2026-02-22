@@ -43,6 +43,7 @@ pipeline {
                         } 
                     else { 
                         bat 'npx playwright test' 
+                    }
                 }
             }
         }
