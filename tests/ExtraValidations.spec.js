@@ -27,9 +27,10 @@ test.only('Dialog Box/pop Up, Hover and Frames', async ({page})=>
 
         //pop up
 
-        const dialogPromise = page.waitForEvent('dialog');
-        await page.locator('#confirmbtn').click();
-        const dialog = await dialogPromise;
+        const [dialog] = await Promise.all([
+            page.waitForEvent('dialog'),  // start listening first
+            page.locator('#confirmbtn').click() // then click
+        ]);
         await dialog.accept();
 
         //hover
