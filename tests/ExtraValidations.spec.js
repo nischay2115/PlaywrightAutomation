@@ -21,7 +21,7 @@ test('Hidden Element Assertion', async ({page})=>
 
 });
 
-test('Dialog Box/pop Up, Hover and Frames', async ({page})=>
+test.only('Dialog Box/pop Up, Hover and Frames', async ({page})=>
 {
         await page.goto('https://rahulshettyacademy.com/AutomationPractice/');
 
