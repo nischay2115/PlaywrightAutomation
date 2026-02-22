@@ -21,14 +21,20 @@ test('Hidden Element Assertion', async ({page})=>
 
 });
 
-test.only('Dialog Box/pop Up, Hover and Frames', async ({page})=>
+test('Dialog Box/pop Up, Hover and Frames', async ({page})=>
 {
         await page.goto('https://rahulshettyacademy.com/AutomationPractice/');
 
         //pop up
-        page.on('dialog', dialog => dialog.accept());
-        
-        await page.locator('#confirmbtn').click();
+
+        const [dialog] = await Promise.all(
+            [
+                page.waitForEvent('dialog'),
+                page.locator('#confirmbtn').click()
+            ]
+        );
+
+        await dialog.accept();
 
         //hover
 

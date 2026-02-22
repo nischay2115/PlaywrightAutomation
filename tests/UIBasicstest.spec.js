@@ -84,7 +84,7 @@ test('UI Controls - Dropdowns and Radio buttons', async ({page})=>
 
 );
 
-test.only('Child Windows Handling', async ({browser})=>
+test('Child Windows Handling', async ({browser})=>
 {
     const context = await browser.newContext();
     const page = await context.newPage();
@@ -101,6 +101,8 @@ test.only('Child Windows Handling', async ({browser})=>
     
         ]
     );
+
+    await newPage.waitForLoadState('networkidle');
 
     const text = await newPage.locator('.red').innerText();//in place od textContent we can use innerText as it never returns null
     const email = text.split('@')[1].split(' ')[0];

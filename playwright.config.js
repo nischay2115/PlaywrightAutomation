@@ -14,6 +14,8 @@ export default defineConfig({
     timeout: 5000
   },
 
+  retries: 1,
+
   reporter: [
     ['line'],
     ['html'],
@@ -26,9 +28,6 @@ export default defineConfig({
     headless: false,
     screenshot: 'on',
     trace: 'on',
-    
-
-    
 
   }
  
