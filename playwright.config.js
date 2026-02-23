@@ -18,7 +18,7 @@ export default defineConfig({
 
   reporter: [
     ['line'],
-    ['html'],
+    ['html', {outputFolder: 'playwright-report', open: 'never'}],
     ['allure-playwright'],
 ],
 
